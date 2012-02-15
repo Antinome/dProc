@@ -1,0 +1,32 @@
+
+<div id="box">
+<table border=0>	
+<tr>
+	<td>	
+		<p>
+		   <b>Title:</b> <%= page.title %>
+		</p>
+	</td>	
+	<td rowspan=4>
+		<p>
+			<%= image_tag page.page_image.url(:thumb) %>
+		</p>
+	</td>
+</tr>
+<tr>
+	<td>
+		<p>   
+   			<b>PageID:</b> <%= page.id %>
+		</p>
+	</td>
+	<td></td>
+</tr>	
+
+</table>
+
+<p>
+  <%= link_to 'Delete Page', [page.task, page],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>
+</div>
